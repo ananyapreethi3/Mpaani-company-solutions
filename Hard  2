@@ -32,6 +32,6 @@ public class ShortestPalindrome {
         System.out.println(shortestPalindrome.shortestPalindrome(s2));
     }
 }
-problem  Hard 2
-Alva's inistute  of engineering and technology
-ananyapaul369@gmail.com
+//problem  Hard 2
+//Alva's inistute  of engineering and technology
+//ananyapaul369@gmail.com
