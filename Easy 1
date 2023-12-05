@@ -1,0 +1,32 @@
+public class LengthOfLastWord {
+    public int lengthOfLastWord(String s) {
+        // Trim the string to remove leading and trailing spaces
+        String trimmed = s.trim();
+
+        // Split the trimmed string into words using spaces as separators
+        String[] words = trimmed.split("\\s+");
+
+        // Return the length of the last word
+        return words[words.length - 1].length();
+    }
+
+    public static void main(String[] args) {
+        LengthOfLastWord lengthOfLastWord = new LengthOfLastWord();
+
+        // Example 1
+        String s1 = "Hello World";
+        System.out.println(lengthOfLastWord.lengthOfLastWord(s1));
+
+        // Example 2
+        String s2 = "   fly me   to   the moon  ";
+        System.out.println(lengthOfLastWord.lengthOfLastWord(s2));
+
+        // Example 3
+        String s3 = "luffy is still joyboy";
+        System.out.println(lengthOfLastWord.lengthOfLastWord(s3));
+    }
+}
+
+//problem    Easy 1
+//Alva's inistute of engineering  and Technology
+//ananyapaul369@gmail.com
