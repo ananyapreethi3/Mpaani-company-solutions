@@ -1,0 +1,43 @@
+public class CountDigitOne {
+    public int countDigitOne(int n) {
+        if (n <= 0) {
+            return 0;
+        }
+
+        int count = 0;
+        long factor = 1; // Represents the current digit place (1, 10, 100, ...)
+
+        while (n / factor > 0) {
+            long currDigit = (n / factor) % 10; // Current digit at the current place
+            long before = n / (factor * 10);    // Number before the current place
+            long after = n % factor;            // Number after the current place
+
+            if (currDigit == 0) {
+                count += before * factor;
+            } else if (currDigit == 1) {
+                count += before * factor + after + 1;
+            } else {
+                count += (before + 1) * factor;
+            }
+
+            factor *= 10; // Move to the next digit place
+        }
+
+        return (int) count;
+    }
+
+    public static void main(String[] args) {
+        CountDigitOne countDigitOne = new CountDigitOne();
+
+        // Example 1
+        int n1 = 13;
+        System.out.println(countDigitOne.countDigitOne(n1));
+
+        // Example 2
+        int n2 = 0;
+        System.out.println(countDigitOne.countDigitOne(n2));
+    }
+}
+//problem    Hard  3
+//Alva's inistute of engineering  and Technology
+//ananyapaul369@gmail.com
